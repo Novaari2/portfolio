@@ -5,89 +5,65 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
-      image: '/work/3.png',
-      category: 'react js',
-      name: 'Nexa Website',
+      image: '/product/panel2.jpg',
+      category: 'panel',
+      name: 'Panel Ats',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
       link: '/',
       github: '/',
   },
   {
-      image: '/work/2.png',
-      category: 'next js',
-      name: 'Nexa Website',
+      image: '/product/panel-pompa.jpeg',
+      category: 'panel',
+      name: 'Panel Pompa',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
       link: '/',
       github: '/',
   },
   {
-      image: '/work/1.png',
-      category: 'next js',
-      name: 'Nexa Website',
+      image: '/product/smart-home.jpeg',
+      category: 'smart home',
+      name: 'Smart Home',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
       link: '/',
       github: '/',
   },
   {
-      image: '/work/4.png',
-      category: 'next js',
-      name: 'Nexa Website',
+      image: '/product/penangkal.jpeg',
+      category: 'penangkal petir',
+      name: 'Penangkal Petir Elektro Statis',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
       link: '/',
       github: '/',
   },
   {
-    image: '/work/3.png',
-    category: 'react js',
-    name: 'Nexa Website',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
-    link: '/',
-    github: '/',
-},
-{
-    image: '/work/2.png',
-    category: 'react js',
-    name: 'Nexa Website',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
-    link: '/',
-    github: '/',
-},
-{
-    image: '/work/1.png',
-    category: 'fullstack',
-    name: 'Nexa Website',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
-    link: '/',
-    github: '/',
-},
-{
-    image: '/work/4.png',
-    category: 'next js',
-    name: 'Nexa Website',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
-    link: '/',
-    github: '/',
-}
+      image: '/product/panel.jpeg',
+      category: 'panel',
+      name: 'Panel LVMDP & SDP',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, assumenda? Qui, provident perspiciatis! Enim, soluta?',
+      link: '/',
+      github: '/',
+  }
 ];
 
 // remove category duplicates
 console.log(projectData.map((item) => item.category))
-const uniqueCategories = ['all projects', ...new Set(projectData.map((item) => item.category))];
+const uniqueCategories = ['semua produk', ...new Set(projectData.map((item) => item.category))];
 console.log(uniqueCategories);
 
 const page = () => {
   const [catgories, setCategories] = useState(uniqueCategories);
-  const [category, setCategory] = useState('all projects');
+  const [category, setCategory] = useState('semua produk');
 
   const filteredProjects = projectData.filter(project => {
     // if category is all projects return all projects else filter by category
-    return category === 'all projects' ? project : project.category === category
+    return category === 'semua produk' ? project : project.category === category
   })
 
   return (
     <section className='min-h-screen pt-12'>
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Projects</h2>
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">Produk Kami</h2>
         {/* tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <TabsList className='w-full grid h-full md:grid-cols-4 lg:max-w-[640px] mb-12 mx-auto md:border dark:border-none'>

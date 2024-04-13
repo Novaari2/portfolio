@@ -4,17 +4,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 const servicesData = [
     {
         icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
-        title: 'Web Design',
+        title: 'Pemasangan Instalasi Listrik Baru',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nobis distinctio officia dolorem aspernatur esse! Nemo distinctio ut saepe totam.'
     },
     {
         icon: <Blocks size={72} strokeWidth={0.8} />,
-        title: 'Web Development',
+        title: 'Pengurusan Pasang Baru & Tambah Daya Listrik',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, voluptatibus?.'
     },
     {
         icon: <Gem size={72} strokeWidth={0.8} />,
-        title: 'App Development',
+        title: 'Perbaikan Instalasi Listrik',
+        description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum quasi quos recusandae ducimus eligendi unde!.'
+    },
+    {
+        icon: <Gem size={72} strokeWidth={0.8} />,
+        title: 'Inspeksi & Perawatan Instalasi Listrik',
         description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum quasi quos recusandae ducimus eligendi unde!.'
     },
 ];
@@ -23,9 +28,9 @@ const Services = () => {
   return (
     <section className='mb-12 xl:mb-36'>
         <div className="container mx-auto">
-            <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>My Services</h2>
+            <h2 className='section-title mb-12 xl:mb-24 text-center mx-auto'>Jasa & Pelayanan Kami</h2>
             {/* grid items */}
-            <div className='grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8'>
+            <div className='grid xl:grid-cols-4 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8'>
                 {servicesData.map((item, index) => {
                     return (
                     <Card className='w-full max-w-[424px] h-[300px] flex flex-col pt-16 pb-10 justify-center items-center relative' key={index}>

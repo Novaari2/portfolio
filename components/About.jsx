@@ -14,70 +14,70 @@ import {
 const infoData = [
     {
         icon: <User2 size={20} />,
-        text: 'Nova Ariyanto',
+        text: 'Circle Engineering',
     },
     {
         icon: <MailIcon size={20} />,
-        text: 'novaari20@gmail.com',
+        text: 'circle@gmail.com',
     },
     {
         icon: <HomeIcon size={20} />,
-        text: 'Pisang 1 39, Semarang, Jateng',
+        text: 'Sendangguwo RT10/01, Kec. Tembalang, Kota Semarang, Jawa Tengah 52304',
     },
     {
         icon: <PhoneCall size={20} />,
-        text: '+62 085346787954',
+        text: '088803905669',
     },
-    {
-        icon: <GraduationCap size={20} />,
-        text: 'Bachelor of Computer Science',
-    },
-    {
-        icon: <Calendar size={20} />,
-        text: 'Born on 20 Dec, 1997',
-    },
-    {
-        icon: <Briefcase size={20} />,
-        text: 'Fulltime',
-    },
+    // {
+    //     icon: <GraduationCap size={20} />,
+    //     text: 'Bachelor of Computer Science',
+    // },
+    // {
+    //     icon: <Calendar size={20} />,
+    //     text: 'Born on 20 Dec, 1997',
+    // },
+    // {
+    //     icon: <Briefcase size={20} />,
+    //     text: 'Fulltime',
+    // },
 ];
 
 const qualificationData = [
     {
-        title: 'education',
+        title: 'visi',
         data: [
             {
-                university: 'Example University',
+                university: 'Menjadi Perusahaan terpercaya dalam bidang pengadaan maupun perawatan sipil & elektrikal',
                 qualification: 'Bachelor of Computer Science',
                 years: '2015 - 2019',
             },
-            {
-                university: 'Another University',
-                qualification: 'Master of Computer Science',
-                years: '2019 - 2021',
-            },
-            {
-                university: 'Yet Another University',
-                qualification: 'Ph.D in Computer Science',
-                years: '2021 - 2025',
-            },
+            // {
+            //     university: 'Another University',
+            //     qualification: 'Master of Computer Science',
+            //     years: '2019 - 2021',
+            // },
+            // {
+            //     university: 'Yet Another University',
+            //     qualification: 'Ph.D in Computer Science',
+            //     years: '2021 - 2025',
+            // },
         ]
     },
     {
-        title: 'experience',
+        title: 'misi',
         data: [
             {
-                company: 'ABC Inc.',
+                company: 'Memiliki sdm yang kompeten, berintegritas, dan tanggung jawab yang tinggi',
                 role: 'Software Engineer',
                 years: '2015 - 2019',
             },
             {
-                company: 'ABC Inc.',
+                company: 'Menyediakan produk yang berkualitas serta bergaransi',
                 role: 'Software Engineer',
                 years: '2015 - 2019',
             },
             {
-                company: 'ABC Inc.',
+                company: 'Memberikan layanan purna jual yang prima, tepat, dan cepat',
                 role: 'Software Engineer',
                 years: '2015 - 2019',
             },
@@ -130,27 +130,27 @@ const About = () => {
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
         <div className="container mx-auto">
-            <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">About Me</h2>
+            <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">Tentang Kami</h2>
             <div className="flex flex-col xl:flex-row">
                 {/* imager */}
                 <div className="hidden xl:flex flex-1 relative">
-                    <DevImg containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative' imgSrc='/about/developer.png' />
+                    <DevImg containerStyles='w-[505px] h-[205px] bg-no-repeat relative mx-auto top-40' imgSrc='/bg.png' />
                 </div>
                 {/* tabs */}
                 <div className="flex-1">
                     <Tabs defaultValue="personal">
-                        <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-                            <TabsTrigger className="w-[162px] xl:w-auto" value="personal">Personal Info</TabsTrigger>
-                            <TabsTrigger className="w-[162px] xl:w-auto" value="qualifications">Qualifications</TabsTrigger>
-                            <TabsTrigger className="w-[162px] xl:w-auto" value="skills">Skills</TabsTrigger>
+                        <TabsList className="w-full grid xl:grid-cols-2 xl:max-w-[520px] xl:border dark:border-none">
+                            <TabsTrigger className="w-[162px] xl:w-auto" value="personal">Company</TabsTrigger>
+                            <TabsTrigger className="w-[162px] xl:w-auto" value="qualifications">Visi Misi</TabsTrigger>
+                            {/* <TabsTrigger className="w-[162px] xl:w-auto" value="skills">Pelayanan</TabsTrigger> */}
                         </TabsList>
                         {/* tabs content */}
                         <div className="text-lg mt-12 xl:mt-8">
                             {/* personal */}
                             <TabsContent value="personal">
                                 <div className="text-center xl:text-left">
-                                    <h3 className="h3 mb-4">Unmatched Service Quality for Over 10 Years</h3>
-                                    <p className="subtitle max-w-xl max-auto xl:mx-0">I specialize in craftiing intuitive website with cutting-edge technology, delivering dynamic and engaging user experience.</p>
+                                    <h3 className="h3 mb-4">Kami merupakan penyedia jasa permasalahan elektrik</h3>
+                                    <p className="subtitle max-w-xl max-auto xl:mx-0">Circle Engineering adalah perusahaan yang bergerak di bidang mekanikal dan electrical di bidang lingkungan, transmisi, distribusi dan swasta. Didirikan pada 4 juli 2020 di Semarang dan bekerja sama dengan perusahaan dan instansi terbaik di Indonesia.</p>
                                     {/* icons */}
                                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                                         {infoData.map((item, index) => {
@@ -161,17 +161,17 @@ const About = () => {
                                         })}
                                     </div>
                                     {/* languages */}
-                                    <div className="flex flex-col gap-y-2">
+                                    {/* <div className="flex flex-col gap-y-2">
                                         <div className="text-primary">Language Skills</div>
                                         <div className="border-b border-border"></div>
                                         <div>English, Bahasa Indonesia</div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </TabsContent>
                             {/* qualifications */}
                             <TabsContent value="qualifications">
                                 <div>
-                                    <h3 className="h3 mb-8 text-center xl:text-left">My Awesome Journey</h3>
+                                    <h3 className="h3 mb-8 text-center xl:text-left">Visi & Misi Kami</h3>
                                     {/* experience & education wrapper */}
                                     <div className="grid md:grid-cols-2 gap-y-8">
                                         {/* experience */}
@@ -179,12 +179,12 @@ const About = () => {
                                             <div className="flex gap-x-4 items-center text-[22px] text-primary">
                                                 <Briefcase />
                                                 <h4 className="capitalize font-medium">
-                                                    {getData(qualificationData, 'experience').title}
+                                                    {getData(qualificationData, 'misi').title}
                                                 </h4>
                                             </div>
                                             {/* list */}
                                             <div className="flex flex-col gap-y-8">
-                                                {getData(qualificationData, 'experience').data.map((item, index) => {
+                                                {getData(qualificationData, 'misi').data.map((item, index) => {
                                                     const {company, role, years} = item;
                                                     return (
                                                         <div className="flex gap-x-8 group" key={index}>
@@ -193,8 +193,8 @@ const About = () => {
                                                             </div>
                                                             <div>
                                                                 <div className="font-semibold text-xl leading-none mb-2">{company}</div>
-                                                                <div className="text-lg leading-none text-muted-foreground mb-4">{role}</div>
-                                                                <div className="text-base font-medium">{years}</div>
+                                                                {/* <div className="text-lg leading-none text-muted-foreground mb-4">{role}</div>
+                                                                <div className="text-base font-medium">{years}</div> */}
                                                             </div>
                                                         </div>
                                                     )
@@ -206,12 +206,12 @@ const About = () => {
                                             <div className="flex gap-x-4 items-center text-[22px] text-primary">
                                                 <GraduationCap size={28} />
                                                 <h4 className="capitalize font-medium">
-                                                    {getData(qualificationData, 'education').title}
+                                                    {getData(qualificationData, 'visi').title}
                                                 </h4>
                                             </div>
                                             {/* list */}
                                             <div className="flex flex-col gap-y-8">
-                                                {getData(qualificationData, 'education').data.map((item, index) => {
+                                                {getData(qualificationData, 'visi').data.map((item, index) => {
                                                     const {university, qualification, years} = item;
                                                     return (
                                                         <div className="flex gap-x-8 group" key={index}>
@@ -220,8 +220,8 @@ const About = () => {
                                                             </div>
                                                             <div>
                                                                 <div className="font-semibold text-xl leading-none mb-2">{university}</div>
-                                                                <div className="text-lg leading-none text-muted-foreground mb-4">{qualification}</div>
-                                                                <div className="text-base font-medium">{years}</div>
+                                                                {/* <div className="text-lg leading-none text-muted-foreground mb-4">{qualification}</div> */}
+                                                                {/* <div className="text-base font-medium">{years}</div> */}
                                                             </div>
                                                         </div>
                                                     )
@@ -234,7 +234,7 @@ const About = () => {
                             {/* skills */}
                             <TabsContent value="skills">
                                 <div className="text-center xl:text-left">
-                                    <h3 className="h3 mb-8">What I Use Everyday</h3>
+                                    <h3 className="h3 mb-8">Jasa & Pelayanan Kami</h3>
                                     {/* skills */}
                                     <div className="mb-16">
                                         <h4 className="text-xl font-semibold mb-2">Skills</h4>
